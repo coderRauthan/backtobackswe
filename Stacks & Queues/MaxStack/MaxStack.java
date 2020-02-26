@@ -30,7 +30,7 @@ class Solution {
       * If the element that we popped was a max element we need to take action to
       * update our max cache stack.
       */
-      if (poppedElement.equals(cachedMaxWithCount.peekFirst().max)) {
+      if (poppedElement == (cachedMaxWithCount.peekFirst().max)) {
 
         /*
         * Reduce the count of occurrences of the element at the top of the max cache
@@ -42,7 +42,7 @@ class Solution {
         * If there are no more of this max element then remove this entry from the max
         * cache stack
         */
-        if (cachedMaxWithCount.peekFirst().count.equals(0)) {
+        if (cachedMaxWithCount.peekFirst().count == 0) {
           cachedMaxWithCount.removeFirst();
         }
       }
